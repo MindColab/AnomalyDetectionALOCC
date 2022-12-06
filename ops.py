@@ -50,8 +50,7 @@ class batch_norm(object):
     '''
     return tf.keras.layers.BatchNormalization(x,
                       epsilon=self.epsilon,
-                      scale=True,
-                      is_training=train,
+                      scale=True,                      
                       scope=self.name)
 
 def conv_cond_concat(x, y):
