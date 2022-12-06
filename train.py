@@ -102,7 +102,7 @@ def main(_):
                     input_fname_pattern=FLAGS.input_fname_pattern,
                     checkpoint_dir=FLAGS.checkpoint_dir,
                     is_training = FLAGS.train,
-                    log_dir=FLAGS.log_dir,
+                    #log_dir=FLAGS.log_dir,
                     sample_dir=FLAGS.sample_dir,
                     nd_patch_size=nd_slice_size,
                     n_stride=n_stride,
