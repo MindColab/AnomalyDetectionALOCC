@@ -11,7 +11,9 @@ import numpy as np
 from time import gmtime, strftime
 from six.moves import xrange
 import matplotlib.pyplot as plt
-import tensorflow as tf
+#import tensorflow as tf
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 #import tensorflow.contrib.slim as slim
 import tf_slim as slim
 
