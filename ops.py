@@ -48,9 +48,9 @@ class batch_norm(object):
                       is_training=train,
                       scope=self.name)
     '''
-    return tf.keras.layers.BatchNormalization(x,
+    return tf.keras.layers.BatchNormalization(
                       epsilon=self.epsilon,
-                      scale=True)
+                      scale=True)(x)
 
 def conv_cond_concat(x, y):
   """Concatenate conditioning vector on feature map axis."""
