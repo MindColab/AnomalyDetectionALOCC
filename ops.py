@@ -20,8 +20,8 @@ except:
   image_summary = tf.summary.image
   scalar_summary = tf.summary.scalar
   histogram_summary = tf.summary.histogram
-  merge_summary = tf.summary.merge
-  SummaryWriter = tf.summary.FileWriter
+  merge_summary = tf.compat.v1.summary.merge
+  SummaryWriter = tf.compat.v1.summary.FileWriter
 
 if "concat_v2" in dir(tf):
   def concat(tensors, axis, *args, **kwargs):
