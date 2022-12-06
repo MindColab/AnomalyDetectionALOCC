@@ -4,7 +4,7 @@ from models import ALOCC_Model
 from utils import pp, visualize, to_json, show_all_variables
 import tensorflow as tf
 
-flags = tf.app.flags
+flags = tf.compat.v1.flags
 flags.DEFINE_integer("epoch", 40, "Epoch to train [25]")
 flags.DEFINE_float("learning_rate", 0.002, "Learning rate of for adam [0.0002]")
 flags.DEFINE_float("beta1", 0.5, "Momentum term of adam [0.5]")
