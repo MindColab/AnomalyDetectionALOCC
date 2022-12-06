@@ -49,8 +49,6 @@ class batch_norm(object):
                       scope=self.name)
     '''
     return tf.keras.layers.BatchNormalization(x,
-                      #decay=self.momentum, 
-                      updates_collections=None,
                       epsilon=self.epsilon,
                       scale=True,
                       is_training=train,
