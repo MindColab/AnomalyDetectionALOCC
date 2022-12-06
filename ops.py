@@ -4,7 +4,8 @@ Some code used from from https://github.com/Newmu/dcgan_code
 
 import math
 import numpy as np 
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 
 from tensorflow.python.framework import ops
 
