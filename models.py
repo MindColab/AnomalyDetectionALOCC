@@ -1,5 +1,7 @@
 from __future__ import division
-from tensorflow.examples.tutorials.mnist import input_data
+#from tensorflow.examples.tutorials.mnist import input_data
+import tensorflow_datasets
+mnist = tensorflow_datasets.load('mnist')
 import re
 from ops import *
 from utils import *
