@@ -105,6 +105,7 @@ def main(_):
                     checkpoint_dir=FLAGS.checkpoint_dir,
                     is_training = FLAGS.train,
                     #log_dir=FLAGS.log_dir,
+                    log_dir="log",
                     sample_dir=FLAGS.sample_dir,
                     nd_patch_size=nd_slice_size,
                     n_stride=n_stride,
