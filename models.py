@@ -192,8 +192,9 @@ class ALOCC_Model(object):
       sample = sample[0:self.sample_num]
 
     # export images
-    sample_inputs = np.array(sample).astype(np.float32)
-    scipy.misc.imsave('./{}/train_input_samples.jpg'.format(config.sample_dir), montage(sample_inputs[:,:,:,0]))
+    sample_inputs = np.array(sample).astype(np.float32)    
+    #scipy.misc.imsave('./{}/train_input_samples.jpg'.format(config.sample_dir), montage(sample_inputs[:,:,:,0]))
+    imageio.imwrite('./{}/train_input_samples.jpg'.format(config.sample_dir), montage(sample_inputs[:,:,:,0]))
 
     # load previous checkpoint
     counter = 1
