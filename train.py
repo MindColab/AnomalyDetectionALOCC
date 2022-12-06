@@ -4,6 +4,7 @@ from models import ALOCC_Model
 from utils import pp, visualize, to_json, show_all_variables
 #import tensorflow as tf
 import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 
 flags = tf.compat.v1.flags
 flags.DEFINE_integer("epoch", 40, "Epoch to train [25]")
