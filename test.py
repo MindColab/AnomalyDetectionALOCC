@@ -28,7 +28,7 @@ flags.DEFINE_string("dataset", "UCSD", "The name of dataset [UCSD, mnist]")
 flags.DEFINE_string("dataset_address", "./dataset/UCSD_Anomaly_Dataset.v1p2/UCSDped2/Test", "The path of dataset")
 flags.DEFINE_string("input_fname_pattern", "*", "Glob pattern of filename of input images [*]")
 flags.DEFINE_string("checkpoint_dir", "./checkpoint/UCSD_128_45_45/", "Directory name to save the checkpoints [checkpoint]")
-flags.DEFINE_string("log_dir", "log", "Directory name to save the log [log]")
+#flags.DEFINE_string("log_dir", "log", "Directory name to save the log [log]")
 flags.DEFINE_string("sample_dir", "samples", "Directory name to save the image samples [samples]")
 flags.DEFINE_boolean("train", False, "True for training, False for testing [False]")
 
