@@ -49,7 +49,7 @@ def check_some_assertions():
         os.makedirs(FLAGS.sample_dir)
 
 def main(_):
-    print('Program is started at', time.clock())
+    print('Program is started at', time.time.process_time())
     pp.pprint(flags.FLAGS.__flags)
 
     n_per_itr_print_results = 100
