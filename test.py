@@ -82,7 +82,7 @@ def main(_):
     nd_patch_size = (FLAGS.input_width, FLAGS.input_height)    
     nd_patch_step = (n_stride, n_stride)
     
-    FLAGS.nStride = n_stride
+    #FLAGS.nStride = n_stride
     #FLAGS.input_fname_pattern = '*'
     FLAGS.train = False
     FLAGS.epoch = 1
