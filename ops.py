@@ -53,7 +53,8 @@ class batch_norm(object):
                       #updates_collections=None,
                       epsilon=self.epsilon,
                       scale=True,
-                      training=train)
+                      training=train,
+                      name=self.name)
 
 def conv_cond_concat(x, y):
   """Concatenate conditioning vector on feature map axis."""
