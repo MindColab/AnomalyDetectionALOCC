@@ -8,6 +8,7 @@ from utils import *
 from kh_tools import *
 import logging
 import matplotlib.pyplot as plt
+import imageio
 
 class ALOCC_Model(object):
   def __init__(self, sess,
@@ -316,12 +317,16 @@ class ALOCC_Model(object):
                     self.z: sample_test
                 },
               )
-              # export images
-              scipy.misc.imsave('./{}/z_test_{:02d}_{:04d}.png'.format(config.sample_dir, epoch, idx),
+              # export images imageio.imwrite
+              #scipy.misc.imsave('./{}/z_test_{:02d}_{:04d}.png'.format(config.sample_dir, epoch, idx),
+              #              montage(samples[:, :, :, 0]))
+              imageio.imwrite('./{}/z_test_{:02d}_{:04d}.png'.format(config.sample_dir, epoch, idx),
                             montage(samples[:, :, :, 0]))
 
               # export images
-              scipy.misc.imsave('./{}/train_{:02d}_{:04d}.png'.format(config.sample_dir, epoch, idx),
+              #scipy.misc.imsave('./{}/train_{:02d}_{:04d}.png'.format(config.sample_dir, epoch, idx),
+              #                  montage(samples[:, :, :, 0]))
+              imageio.imwrite('./{}/train_{:02d}_{:04d}.png'.format(config.sample_dir, epoch, idx),
                                 montage(samples[:, :, :, 0]))
 
               msg = "[Sample] d_loss: %.8f, g_loss: %.8f" % (d_loss, g_loss)
@@ -497,6 +502,9 @@ class ALOCC_Model(object):
     #f = plt.figure()
     #plt.plot(np.array(lst_discriminator_v))
     #f.savefig('samples/d_values.jpg')
-
-    scipy.misc.imsave('./'+self.sample_dir+'/ALOCC_generated.jpg', montage(np.array(lst_generated_img)[:,:,:,0]))
-    scipy.misc.imsave('./'+self.sample_dir+'/ALOCC_input.jpg', montage(np.array(tmp_lst_slices)[:,:,:,0]))
+    # imageio.imwrite
+    #scipy.misc.imsave('./'+self.sample_dir+'/ALOCC_generated.jpg', montage(np.array(lst_generated_img)[:,:,:,0]))
+    #scipy.misc.imsave('./'+self.sample_dir+'/ALOCC_input.jpg', montage(np.array(tmp_lst_slices)[:,:,:,0]))
+    imageio.imwrite('./'+self.sample_dir+'/ALOCC_generated.jpg', montage(np.array(lst_generated_img)[:,:,:,0]))
+    imageio.imwrite('./'+self.sample_dir+'/ALOCC_input.jpg', montage(np.array(tmp_lst_slices)[:,:,:,0]))
+    
