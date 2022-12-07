@@ -1,5 +1,7 @@
 import tensorflow as tf
-from tensorflow.examples.tutorials.mnist import input_data
+#from tensorflow.examples.tutorials.mnist import input_data
+import tensorflow_datasets
+mnist = tensorflow_datasets.load('mnist')
 from utils import pp, visualize, to_json, show_all_variables
 from models import ALOCC_Model
 import matplotlib.pyplot as plt
