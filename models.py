@@ -492,17 +492,18 @@ class ALOCC_Model(object):
         #results = self.sess.run(self.sampler, feed_dict={self.z: batch_data})
 
         # to log some images with d values
-        #for idx,image in enumerate(results_g):
+        for idx,image in enumerate(results_g):
         #  scipy.misc.imsave('samples/{}_{}.jpg'.format(idx,results_d[idx][0]),batch_data[idx,:,:,0])
+          imageio.imwrite('samples/{}_{}.jpg'.format(idx,results_d[idx][0]),batch_data[idx,:,:,0])
 
         lst_discriminator_v.extend(results_d)
         lst_generated_img.extend(results_g)
         print('finish pp ... {}/{}'.format(i,batch_idxs))
 
-    #f = plt.figure()
-    #plt.plot(np.array(lst_discriminator_v))
-    #f.savefig('samples/d_values.jpg')
-    # imageio.imwrite
+    f = plt.figure()
+    plt.plot(np.array(lst_discriminator_v))
+    f.savefig('samples/d_values.jpg')
+    
     #scipy.misc.imsave('./'+self.sample_dir+'/ALOCC_generated.jpg', montage(np.array(lst_generated_img)[:,:,:,0]))
     #scipy.misc.imsave('./'+self.sample_dir+'/ALOCC_input.jpg', montage(np.array(tmp_lst_slices)[:,:,:,0]))
     imageio.imwrite('./'+self.sample_dir+'/ALOCC_generated.jpg', montage(np.array(lst_generated_img)[:,:,:,0]))
